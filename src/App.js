@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router';
 import { Layout } from './pages';
-import { Home, Users, Shop } from './components';
+import { Home, Users, Shop, Param, Blogpage, Post } from './components';
 import './styles/global.css';
 
 const App = () => {
@@ -12,6 +12,9 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/users' element={<Users />} />
         <Route path='/shop' element={<Shop />} />
+        <Route path='/param/:id' element={<Param />} />
+        <Route path='/posts' element={<Blogpage />} />
+        <Route path='/posts/:id' element={<Post />} />
       </Routes>
     </>
   );
